@@ -1,0 +1,13 @@
+CFLAGS=/nologo /W3 /MD
+
+all: so-cpp.exe
+
+so-cpp.exe: main.obj xreadwrite.obj
+	link /nologo /out:$@ $**
+
+main.obj: main.c HashMap.h
+
+xreadwrite.obj: xreadwrite.c xreadwrite.h
+
+clean:
+	del /Q /F *.obj *.exe

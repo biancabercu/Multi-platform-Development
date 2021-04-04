@@ -1,0 +1,92 @@
+./maininaintedead.c:38: WARNING:BLOCK_COMMENT_STYLE: Block comments use * on subsequent lines
+./materiale/Hash.c:92: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./maininaintedead.c:171: WARNING:DEEP_INDENTATION: Too many leading tabs - consider code refactoring
+./maininaintedead.c:163: ERROR:ELSE_AFTER_BRACE: else should follow close brace '}'
+./test8in.c:1: ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - int main() should probably be int main(void)
+./test8in.c:2: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./_test/inputs/incerc.c:8: WARNING:LINE_SPACING: Missing a blank line after declarations
+./maininaintedead.c:123: WARNING:LONG_LINE: line over 80 characters
+./maininaintedead.c:58: WARNING:LONG_LINE_COMMENT: line over 80 characters
+./mainLAST.c:151: WARNING:LONG_LINE_STRING: line over 80 characters
+./test8in.c:1: ERROR:OPEN_BRACE: open brace '{' following function definitions go on the next line
+./_test/inputs/incerc.c:12: WARNING:QUOTED_WHITESPACE_BEFORE_NEWLINE: unnecessary whitespace before a quoted newline
+./mainLAST.c:43: WARNING:SPACE_BEFORE_TAB: please, no space before tabs
+./_test/inputs/incerc.c:8: ERROR:SPACING: space required after that ',' (ctx:VxV)
+./maininaintedead.c:239: WARNING:SUSPECT_CODE_INDENT: suspect code indent for conditional statements (0, 40)
+./mainLAST.c:151: ERROR:TRAILING_STATEMENTS: trailing statements should be on next line
+./maininaintedead.c:19: ERROR:TRAILING_WHITESPACE: trailing whitespace
+00) Sources check...........................................failed  [ 0/95]
+bad.file01) Test bad input..........................................failed  [ 0/95]
+02) Test bad parameters.....................................passed  [01/95]
+input error file
+03) Test multiple files.....................................passed  [01/95]
+_test/outputs/test4.out vs _test/outputs/test4.ref:
+--- _test/outputs/test4.out	2020-03-11 14:56:53.601748599 +0200
++++ _test/outputs/test4.ref	2020-03-11 14:56:53.601748599 +0200
+@@ -0,0 +1 @@
++file passed through standard input
+04) Test stdin file.........................................failed  [ 0/95]
+04) Test stdin file - memcheck..............................failed  [ 0/95]
+05) Test simple file........................................passed  [01/95]
+05) Test simple file - memcheck.............................passed  [01/95]
+file passed as output
+_test/outputs/test6.out vs _test/outputs/test6.ref:
+06) Test simple out file....................................failed  [ 0/95]
+06) Test simple out file - memcheck.........................passed  [01/95]
+07) Test simple define......................................passed  [02/95]
+07) Test simple define - memcheck...........................passed  [01/95]
+08) Test param define.......................................passed  [02/95]
+08) Test param define - memcheck............................passed  [01/95]
+09) Test simple define/undef................................passed  [02/95]
+09) Test simple define/undef - memcheck.....................passed  [01/95]
+_test/outputs/test10.out vs _test/outputs/test10.ref:
+--- _test/outputs/test10.out	2020-03-11 14:56:58.437748798 +0200
++++ _test/outputs/test10.ref	2020-03-11 14:56:57.817748773 +0200
+@@ -1,9 +1,6 @@
+-4
+-
+ int main() {
+-    printf("%s\n", "10";
+-    int x = 20 + 20;
++    printf("%s\n", "10");
++    int x = 20 + 4 + 20;
+10) Test multiple defines...................................failed  [ 0/95]
+10) Test multiple defines - memcheck........................passed  [01/95]
+_test/outputs/test11.out vs _test/outputs/test11.ref:
+--- _test/outputs/test11.out	2020-03-11 14:56:59.093748825 +0200
++++ _test/outputs/test11.ref	2020-03-11 14:56:58.477748800 +0200
+@@ -1,8 +1,5 @@
+-15
+-
+ int main() {
+-    printf("%d\n", ABC);
+-    int x = ABC + 20;
+-
++    printf("%d\n", 10);
+11) Test nested defines.....................................failed  [ 0/95]
+11) Test nested defines - memcheck..........................passed  [01/95]
+_test/outputs/test12.out vs _test/outputs/test12.ref:
+--- _test/outputs/test12.out	2020-03-11 14:56:59.785748854 +0200
++++ _test/outputs/test12.ref	2020-03-11 14:56:59.137748827 +0200
+@@ -1,11 +1,5 @@
+-\
+-        + 2\
+-        + 3\
+-        + 4
+-
+ int main() {
+-    int y = 1 + 1;
+12) Test multi-lines defines................................failed  [ 0/95]
+12) Test multi-lines defines - memcheck.....................passed  [01/95]
+_test/outputs/test13.out vs _test/outputs/test13.ref:
+--- _test/outputs/test13.out	2020-03-11 14:57:00.453748881 +0200
++++ _test/outputs/test13.ref	2020-03-11 14:56:59.837748856 +0200
+@@ -1,6 +1,4 @@
+ int main() {
+-#if 1
+ 	printf("Yes!\n");
+-#endif
+ 	return 0;
+ }
+13) Test simple if true.....................................failed  [ 0/95]
+13) Test simple if true - memcheck..........................passed  [01/95]
